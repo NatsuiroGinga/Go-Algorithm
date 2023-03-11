@@ -1,13 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	var s, p string
-	fmt.Scan(&s, &p)
-	anagrams := findAnagrams(s, p)
-	fmt.Println(anagrams)
-}
+package day11
 
 func findAnagrams(s string, p string) []int {
 	var (
@@ -41,9 +32,10 @@ func findAnagrams(s string, p string) []int {
 			if v := freq[s[left]]; v >= 0 {
 				// 表示窗口size-1
 				count--
-				freq[s[left]]++
 			}
 
+			// 窗口左边界前进1步
+			freq[s[left]]++
 			left++
 		}
 	}

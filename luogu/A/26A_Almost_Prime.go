@@ -1,4 +1,4 @@
-package search
+package A
 
 import "fmt"
 

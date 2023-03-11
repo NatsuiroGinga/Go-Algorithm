@@ -1,4 +1,4 @@
-package search
+package A
 
 import (
 	"fmt"
@@ -36,6 +36,6 @@ func dfs(cur int, pos int) { // cur: count of chosen sticks, pos: the start posi
 
 	for i := pos; i < 4; i++ {
 		ans[cur] = sticks[i] // choose the i-th stick
-		dfs(cur+1, i+1)      // search the next stick
+		dfs(cur+1, i+1)      // B the next stick
 	}
 }
