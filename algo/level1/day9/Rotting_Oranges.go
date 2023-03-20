@@ -1,7 +1,5 @@
 package day9
 
-import "sort"
-
 /*
 Intuition: BFS And DP
 Approach:
@@ -30,8 +28,6 @@ func orangesRotting(grid [][]int) int {
 		count   = 0 // count of fresh oranges
 		minutes = 0 // minutes
 	)
-
-	sort.Reverse()
 
 	for i, line := range grid {
 		ans[i] = make([]int, cols)
