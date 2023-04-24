@@ -27,7 +27,7 @@ Output: 3
 ## 代码
 ```go
 /**
- * Definition for a binary tree node.
+ * Definition for a binary binary_tree node.
  * type TreeNode struct {
  *     Val int
  *     Left *TreeNode

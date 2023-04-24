@@ -1,17 +1,18 @@
 package main
 
-func minOperations(nums []int, queries []int) []int64 {
-	var ans []int64
-	var numSum int64
+import "fmt"
 
-	for _, num := range nums {
-		numSum += int64(num)
+func main() {
+	var nodes []Node
+	nodes = append(nodes, Node{1, 2, 3})
+
+	for i := range nodes {
+		fmt.Println(nodes[i])
 	}
 
-	for _, query := range queries {
-		l := int64(len(nums))
-		ans = append(ans, numSum-int64(query)*l)
-	}
+	fmt.Println(nodes)
+}
 
-	return ans
+type Node struct {
+	x, y, step int
 }
