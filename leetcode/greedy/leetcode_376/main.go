@@ -1,18 +1,22 @@
 package leetcode_376
 
 func wiggleMaxLength(nums []int) int {
-	ans := 0
+	up, down := 1, 1
 
-	for i := 1; i < len(nums)-1; i++ {
-		preDif := nums[i] - nums[i-1]
-		curDif := nums[i+1] - nums[i]
-
-		if curDif*preDif <= 0 {
-			ans++
+	for i := 1; i < len(nums); i++ {
+		if nums[i] > nums[i-1] {
+			up = down + 1
+		} else if nums[i] < nums[i-1] {
+			down = up + 1
 		}
 	}
 
-	ans += 2
+	max := func(a, b int) int {
+		if a > b {
+			return a
+		}
+		return b
+	}
 
-	return 0
+	return max(up, down)
 }
