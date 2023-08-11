@@ -1,7 +1,15 @@
 package main
 
-func main() {
+import (
+	"log"
+	"math/rand"
+)
 
+func main() {
+	nums := rand.Perm(10)
+	log.Println(nums)
+	_quickSort(nums, 0, len(nums)-1)
+	log.Println(nums)
 }
 
 func _quickSort(nums []int, left, right int) []int {

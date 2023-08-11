@@ -15,10 +15,11 @@ func quicksort(nums []int) []int {
 	if len(nums) < 2 {
 		return nums
 	}
+
 	pivot := nums[0]
 	var left, right []int
 
-	for _, num := range nums[1:] {
+	for _, num := range nums {
 		if num < pivot {
 			left = append(left, num)
 		} else {
